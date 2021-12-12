@@ -57,12 +57,15 @@ print(powerConsumption)
 
 # PART 2
 # Oxygen
-while(len(binary2) > 1):
-    for x in range(len(binary2[0])):
-        if(count(binary2, x) == '0'):
-            binary2 = [num for num in binary2 if num[x] == '0']
-        elif(count(binary2, x) == '1'):
-            binary2 = [num for num in binary2 if num[x] == '1']
+for x in range(len(binary2[0])):
+    if(count(binary2, x) == '0'):
+        binary2 = [num for num in binary2 if num[x] == '0']
+    elif(count(binary2, x) == '1'):
+        binary2 = [num for num in binary2 if num[x] == '1']
+    if(len(binary2) == 1):
+        break
+
+print(binary2)
 
 ogr = binary2[0]
 
@@ -71,12 +74,15 @@ print(ogr)
 print(binaryToDecimal(ogr))
 
 # CO2
-while(len(binary3) > 1):
-    for x in range(len(binary3[0])):
-        if(count(binary3, x) == '0'):
-            binary3 = [num for num in binary3 if num[x] == '1']
-        elif(count(binary3, x) == '1'):
-            binary3 = [num for num in binary3 if num[x] == '0']
+for x in range(len(binary3[0])):
+    if(count(binary3, x) == '1'):
+        print("hallo" , binary3)
+        binary3 = [num for num in binary3 if num[x] == '0']
+    elif(count(binary3, x) == '0'):
+        print("tschüss", binary3)
+        binary3 = [num for num in binary3 if num[x] == '1']
+    if(len(binary3) == 1):
+        break
 
 print(binary3)
 
